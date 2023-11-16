@@ -12,8 +12,12 @@ class ByteStream
 {
 protected:
   uint64_t capacity_;
+  uint64_t buffer_count;
+  uint64_t pop_count;
   // Please add any additional state to the ByteStream here, and not to the Writer and Reader interfaces.
-
+  std::queue<char> stream;
+  bool is_closed_flag;
+  bool is_error_flag;
 public:
   explicit ByteStream( uint64_t capacity );
 
