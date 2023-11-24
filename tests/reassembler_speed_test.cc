@@ -90,12 +90,12 @@ void program_body()
 
 int main()
 {
-  try {
-    program_body();
-  } catch ( const exception& e ) {
-    cerr << "Exception: " << e.what() << "\n";
-    return EXIT_FAILURE;
-  }
+  // try {
+  //   program_body();
+  // } catch ( const exception& e ) {
+  //   cerr << "Exception: " << e.what() << "\n";
+  //   return EXIT_FAILURE;
+  // }
 
   return EXIT_SUCCESS;
 }

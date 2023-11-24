@@ -10,7 +10,6 @@ int main()
   try {
     {
       ReassemblerTestHarness test { "all within capacity", 2 };
-
       test.execute( Insert { "ab", 0 } );
       test.execute( BytesPushed( 2 ) );
       test.execute( BytesPending( 0 ) );

@@ -3,7 +3,7 @@
 #include "byte_stream_test_harness.hh"
 #include "common.hh"
 #include "reassembler.hh"
-
+#include <iostream>
 #include <optional>
 #include <sstream>
 #include <utility>
@@ -76,6 +76,8 @@ struct Insert : public Action<StreamAndReassembler>
 
   void execute( StreamAndReassembler& sr ) const override
   {
+    // if (data_ == "b" && first_index_ == 1)
+    //   std::cout << "is_last_substring_: " << is_last_substring_ << std::endl;
     sr.second.insert( first_index_, data_, is_last_substring_, sr.first.writer() );
   }
 };
